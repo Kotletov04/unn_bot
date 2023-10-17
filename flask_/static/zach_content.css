@@ -1,0 +1,46 @@
+.zach_content {
+    display: block;
+    background-color: rgb(63, 82, 101);
+    position: fixed;
+    top: -150%;
+    width: 100%;
+    left: -5px;
+    margin: 0;
+    right: 0;
+    transform: translateY(0);
+    animation: gg 1s forwards;
+    border: 5px solid rgb(30, 52, 74);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+#open_zach.show  {
+    display: block;
+    background-color: rgb(63, 82, 101);
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    left: -5px;
+    margin: 0;
+    right: 0;
+    transform: translateY(-150%);
+    animation: ani 1s forwards;
+    border: 5px solid rgb(30, 52, 74);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+@keyframes ani {
+    0% {transform: translateY(-150%);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes gg {
+    0% {top: 90px;}
+    90% {transform: translateY(-150%);}
+}   
+
+
+#button_color.show_color {
+    background-color: rgb(123 151 179);
+}

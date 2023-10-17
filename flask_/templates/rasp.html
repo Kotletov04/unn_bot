@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block body %}
+{% for i in rasp %}
+    <div class="element">
+        <div class="head_date">
+            <div class="day">{{i}}</div>
+            <!-- <div class="week">{{week}}</div> -->
+        </div>
+        {% for k in range(rasp[i]['power_lesson'][0]) %}
+        <div class="main_info">
+            <div class="lesson_object">
+                <div class="name_lesson">{{rasp[i]['name_lesson'][k]}}</div>
+                <div class="lesson_item">
+                    <div class="time_lesson">{{rasp[i]['first_time'][k]}} - {{rasp[i]['last_time'][k]}}</div>
+                    <div class="type_lesson"><i class="fa-solid fa-pen"></i>{{rasp[i]['type_lesson'][k]}}</div>
+                    <div class="lecturer"><i class="fa-solid fa-user"></i>{{rasp[i]['name_lecturer'][k]}}</div>
+                    <div class="stream"><i class="fa-solid fa-users"></i>{{rasp[i]['stream'][k]}}</div>
+                    <div class="building-auditorium"><i class="fa-solid fa-house"></i>{{rasp[i]['auditorium'][k]}}</div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+{% endblock %}
